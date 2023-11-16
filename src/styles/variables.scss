@@ -1,0 +1,49 @@
+$white: #fff;
+$black: #000;
+$space: #4f5a60;
+$pepper: #818a91;
+$grey100: #f3f6f7;
+$grey200: #e7ecef;
+$grey300: #ced5dc;
+$grey400: #bec8ce;
+$grey500: #bfc9cf;
+$teal: #00b0b2;
+$dark-teal: #158693;
+$lettuce: #48dcc0;
+$red: #e54545;
+$yellow: #ffd049;
+$blue: #3384e1;
+$orange: #ff9d5a;
+$orange2: #ff8b00;
+$neutral-dark: #666e76;
+$white-grey: #fafdff;
+$brown: #81716b;
+
+$border-box-shadow: rgba(0, 0, 0, 0.04);
+$border-box-shadow2: rgba(34, 41, 48, 0.12);
+
+// eslint-disable-next-line
+:export {
+  white: $white;
+  black: $black;
+  space: $space;
+  pepper: $pepper;
+  grey100: $grey100;
+  grey200: $grey200;
+  grey300: $grey300;
+  grey400: $grey400;
+  grey500: $grey500;
+  teal: $teal;
+  dark-teal: $dark-teal;
+  lettuce: $lettuce;
+  red: $red;
+  yellow: $yellow;
+  blue: $blue;
+  orange: $orange;
+  orange2: $orange2;
+  neutral-dark: $neutral-dark;
+  border-box-shadow: $border-box-shadow;
+  border-box-shadow2: $border-box-shadow2;
+  white-grey: $white-grey;
+  brown: $brown;
+}

@@ -1,0 +1,87 @@
+$mobile-min: 320px;
+$mobile-max: 767px;
+$tablet-min: 768px;
+$tablet-max: 1023px;
+$border-radius: 5px;
+$mobileHeaderHeight: 57px;
+
+@mixin shadowy {
+  box-shadow: 0 0 8px rgba(206, 213, 220, 0.65);
+  border-radius: $border-radius;
+}
+
+@mixin responsiveScreenMobile($orientation: false) {
+  @if $orientation {
+    @media screen and (min-width: $mobile-min) and (max-width: $mobile-max) and (orientation: #{$orientation}) {
+      @content;
+    }
+  }
+
+  @else {
+    @media screen and (min-width: $mobile-min) and (max-width: $mobile-max) {
+      @content;
+    }
+  }
+}
+
+@mixin responsiveScreenTablet($orientation: false) {
+  @if $orientation {
+    @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) and (orientation: #{$orientation}) {
+      @content;
+    }
+  }
+
+  @else {
+    @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
+      @content;
+    }
+  }
+}
+
+@mixin responsiveScreenMobileAndTablet($orientation: false) {
+  @if $orientation {
+    @media screen and (min-width: $mobile-min) and (max-width: $tablet-max) and (orientation: #{$orientation}) {
+      @content;
+    }
+  }
+
+  @else {
+    @media screen and (min-width: $mobile-min) and (max-width: $tablet-max) {
+      @content;
+    }
+  }
+}
+
+@mixin flow {
+
+  &>div,
+  &>div span,
+  &>div button,
+  &>div a,
+  &>div p,
+  &>div section,
+  &>div article {
+    flex: 1;
+  }
+}
+
+@mixin bgGradientLightBlue {
+  background: rgb(248, 252, 255);
+  /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(248, 252, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(248, 252, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(248, 252, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

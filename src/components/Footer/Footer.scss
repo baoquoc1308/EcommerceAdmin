@@ -1,0 +1,12 @@
+@import '../../styles/variables.scss';
+
+.footer {
+  position: relative;
+  height: 70px;
+  background: $white;
+  color: $pepper;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid $grey200;
+}

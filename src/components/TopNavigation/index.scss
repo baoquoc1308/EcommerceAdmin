@@ -1,0 +1,23 @@
+@import '../../styles/variables.scss';
+
+.header-hrdept {
+  display: flex;
+  align-items: 'center';
+  justify-content: space-between;
+  background: $white;
+  border-bottom: 1px solid $grey200;
+
+  &__logo-name {
+    display: flex;
+
+    p {
+      color: $black;
+      font-weight: 600;
+      margin-left: 1rem;
+    }
+
+    a {
+      margin-top: 0.5rem;
+    }
+  }
+}

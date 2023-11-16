@@ -1,0 +1,9 @@
+.main-app {
+  &__content {
+    .ant-menu-light .ant-menu-submenu-selected>.ant-menu-submenu-title {
+      background-color: #3dbeba49;
+      color: rgb(0, 0, 0);
+      font-weight: 600;
+    }
+  }
+}
