@@ -28,12 +28,7 @@ const App = () => {
               <Route exact path="/admin/product-deleted">
                 <Checkout />
               </Route>
-              <Route exact path="/settings/account">
-                <>
-                  Please add components Breadcrumb and Content of Account over
-                  here
-                </>
-              </Route>
+              <Route exact path="/settings/account"></Route>
               <Route path="*">
                 <Redirect to="/" />
               </Route>
