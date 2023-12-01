@@ -20,12 +20,12 @@ const App = () => {
           <Content>
             <Switch>
               <Route exact path="/">
-                <Redirect to="/admin/posted-job" />
+                <Redirect to="/admin/posted-product" />
               </Route>
-              <Route exact path={['/admin/posted-job', '/admin/edit/:id']}>
+              <Route exact path={['/admin/posted-product', '/admin/edit/:id']}>
                 <Dashboard />
               </Route>
-              <Route exact path="/admin/job-deleted">
+              <Route exact path="/admin/product-deleted">
                 <Checkout />
               </Route>
               <Route exact path="/settings/account">

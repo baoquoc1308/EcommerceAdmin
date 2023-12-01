@@ -24,12 +24,12 @@ const getItem = (label, key, icon, children) => {
 const itemsSideBarUPA = [
   getItem('Admin', 'admin', <PieChartOutlined />, [
     getItem(
-      <Link to="/admin/posted-job">Posted job</Link>,
-      '/admin/posted-job'
+      <Link to="/admin/posted-product">Add products</Link>,
+      '/admin/posted-product'
     ),
     getItem(
-      <Link to="/admin/job-deleted">Job deleted</Link>,
-      '/admin/job-deleted'
+      <Link to="/admin/product-deleted">Product management</Link>,
+      '/admin/product-deleted'
     ),
   ]),
   getItem('Settings', 'settings', <TeamOutlined />, [
@@ -41,7 +41,7 @@ const Sidebar = () => {
   const location = useLocation()
   const [collapsed, setCollapsed] = useState(false)
   const [current, setCurrent] = useState(
-    location.pathname || '/admin/posted-job'
+    location.pathname || '/admin/posted-product'
   )
   const {
     token: { colorBgContainer },

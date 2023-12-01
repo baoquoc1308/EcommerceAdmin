@@ -9,7 +9,6 @@ import { Link, useHistory } from 'react-router-dom/cjs/react-router-dom.min'
 
 const Checkout = props => {
   const [products, setProducts] = useState([])
-  console.log('🚀 ~ file: index.js:11 ~ Checkout ~ products:', products)
 
   const [loading, setLoading] = useState(false)
   const [sortOption, setSortOption] = useState(null)
@@ -28,7 +27,7 @@ const Checkout = props => {
   const handleOk = () => {
     // Perform the delete operation here
     setIsModalVisible(false)
-    toast.success('Đã xóa thành công đơn hàng!', {
+    toast.success('Đã xóa thành công sản phẩm!', {
       position: toast.POSITION.TOP_RIGHT,
       autoClose: 2000,
     })

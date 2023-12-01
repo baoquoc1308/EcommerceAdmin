@@ -26,6 +26,7 @@ const AddNewProduct = () => {
       position: 'top-right',
       autoClose: 3500,
     })
+    history.push('/admin/product-deleted')
   }
 
   const handleResponseEditProduct = data => {
@@ -33,7 +34,7 @@ const AddNewProduct = () => {
       position: 'top-right',
       autoClose: 3500,
     })
-    history.push('/admin/job-deleted')
+    history.push('/admin/product-deleted')
   }
 
   const [productDetail, setProductDetail] = useState([])
@@ -113,7 +114,8 @@ const AddNewProduct = () => {
   useEffect(() => {
     if (isEditProduct && productDetail) {
       form.setFieldsValue({
-        title: productDetail?.title,
+        // title: productDetail?.title,
+        title: '123',
         description: productDetail?.description,
         price: productDetail?.price,
         discountPercentage: productDetail?.discountPercentage,
@@ -121,7 +123,7 @@ const AddNewProduct = () => {
         stock: productDetail?.stock,
         brand: productDetail?.brand,
         category: productDetail?.category,
-        images: productDetail?.thumbnail,
+        // images: productDetail?.thumbnail,
       })
     }
   }, [productDetail])
@@ -133,7 +135,9 @@ const AddNewProduct = () => {
   return (
     <div className="add-job">
       <div className="title-welcome">
-        <h2 class="">THÊM MỚI SẢN PHẨM</h2>
+        <h2 class="">
+          {isEditProduct ? 'CHỈNH SỬA SẢN PHẨM ' : 'THÊM MỚI SẢN PHẨM'}
+        </h2>
       </div>
       <Form
         form={form}
@@ -142,7 +146,7 @@ const AddNewProduct = () => {
         style={{
           maxWidth: 600,
         }}
-        initialValues={isEditProduct && productDetail}
+        // initialValues={isEditProduct && productDetail}
         scrollToFirstError
       >
         <Form.Item
@@ -239,7 +243,7 @@ const AddNewProduct = () => {
             min={0}
             max={100}
             step={1}
-            addonAfter="sản phẩm"
+            addonAfter="items"
             placeholder="Enter price"
             size="large"
           />

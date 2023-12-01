@@ -1,4 +1,3 @@
-
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Layout } from 'antd'
@@ -9,10 +8,10 @@ const { Header } = Layout
 
 const TopNavigation = () => {
   return (
-    <Header className='header-hrdept'>
-      <div className='header-hrdept__logo-name'>
-        <Link to='/admin/posted-job'>
-          <img src={Images.logo} alt='Logo' />
+    <Header className="header-hrdept">
+      <div className="header-hrdept__logo-name">
+        <Link to="/admin/posted-product">
+          <img src={Images.logo} alt="Logo" />
         </Link>
       </div>
     </Header>

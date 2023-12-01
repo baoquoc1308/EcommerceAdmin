@@ -3,19 +3,11 @@ import './index.scss'
 import HeadingTemplateChildPage from '../HeadingTemplateChildPage'
 import AddNewProduct from '../AddNewProduct'
 
-const breadcrumbAuditTrails = [
-  {
-    title: 'Dashboard',
-  },
-]
+const breadcrumbAuditTrails = [{}]
 
 const Dashboard = () => {
   return (
     <>
-      <HeadingTemplateChildPage
-        title="Add product"
-        breadcrumbItems={breadcrumbAuditTrails}
-      />
       <div className="dashboard-page">
         <AddNewProduct />
       </div>

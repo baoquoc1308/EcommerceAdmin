@@ -9,6 +9,9 @@
 
   &__logo-name {
     display: flex;
+    img {
+      width: 2rem;
+    }
 
     p {
       color: $black;
